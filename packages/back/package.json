@@ -1,0 +1,20 @@
+{
+  "name": "@monorepo/back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Rafael Souza (https://rafaelangical.github.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.7.1"
+  },
+  "scripts": {
+    "dev": "nodemon ./server.ts",
+    "start": "node server.ts"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  }
+}

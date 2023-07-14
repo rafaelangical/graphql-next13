@@ -1,0 +1,28 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Rafael Souza (https://rafaelangical.github.io/)",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": {
+    "packages": [
+      "packages/next",
+      "packages/back"
+    ]
+  },
+  "scripts": {
+    "start": "concurrently \"yarn workspace @monorepo/back start\" \"yarn workspace @monorepo/next start\"",
+    "dev": "concurrently \"yarn workspace @monorepo/back dev\" \"yarn workspace @monorepo/next dev\"",
+    "start:back": "yarn workspace @monorepo/back start",
+    "start:front": "yarn workspace @monorepo/next start",
+    "dev:back": "yarn workspace @monorepo/back dev",
+    "dev:front": "yarn workspace @monorepo/next dev",
+    "test": "yark workspaces run test",
+    "lint": "yark workspaces run lint",
+    "clean": "rimraf node_modules **/node_modlues"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
